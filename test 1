@@ -1,0 +1,53 @@
+## Introduction
+
+
+```cpp
+#include <iostream>
+
+int main() {
+    // Declare a variable of type int and initialize it with a value
+    int number = 10;
+
+    // Declare a pointer to an integer
+    int* pointer;
+
+    // Assign the address of 'number' to the pointer
+    pointer = &number;
+
+    // Print the value of 'number' and its address using the pointer
+    std::cout << "Value of 'number': " << number << std::endl;
+    std::cout << "Address of 'number': &number = " << &number << std::endl;
+
+    // Print the value of the pointer (which is the address of 'number')
+    std::cout << "Value of 'pointer': " << pointer << std::endl;
+
+    // Print the value that the pointer is pointing to (dereferencing the pointer)
+    std::cout << "Value pointed by 'pointer': *pointer = " << *pointer << std::endl;
+
+    // Modify the value of 'number' using the pointer
+    *pointer = 20;
+
+    // Print the updated value of 'number' and its address using the pointer
+    std::cout << "Updated value of 'number': " << number << std::endl;
+    std::cout << "Address of 'number': &number = " << &number << std::endl;
+
+    // Print the updated value of the pointer (which is still the address of 'number')
+    std::cout << "Updated value of 'pointer': " << pointer << std::endl;
+
+    // Print the updated value that the pointer is pointing to
+    std::cout << "Value pointed by 'pointer': *pointer = " << *pointer << std::endl;
+
+    return 0;
+}
+```
+Output you will get is:
+```csharp
+Value of 'number': 10
+Address of 'number': &number = 0x7ffee27c7a7c
+Value of 'pointer': 0x7ffee27c7a7c
+Value pointed by 'pointer': *pointer = 10
+Updated value of 'number': 20
+Address of 'number': &number = 0x7ffee27c7a7c
+Updated value of 'pointer': 0x7ffee27c7a7c
+Value pointed by 'pointer': *pointer = 20
+```
